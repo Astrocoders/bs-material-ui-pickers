@@ -42,6 +42,76 @@ let option_map = (fn, option) =>
   | None => None
   };
 
+module DatePicker = {
+  [@bs.module "material-ui-pickers"];
+  external reactClass : ReasonReact.reactClass = "DatePicker";
+  module TimeUnit = {
+    type t =
+      | Year
+      | Date
+      | Hour
+      | Minutes;
+    let to_string =
+      fun
+      | Year => "year"
+      | Date => "date"
+      | Hour => "hour"
+      | Minutes => "minutes";
+  };
+  let make =
+      (
+        ~value:
+           option(
+             [
+               | `Date(Js.Date.t)
+               | `Moment(MomentRe.Moment.t)
+               | `String(string)
+               | `Object(Js.t({..}))
+             ]
+           )=?,
+        ~format: option(string)=?,
+        ~label:
+           option(
+             [ | `ReactElement(ReasonReact.reactElement) | `String(string)]
+           )=?,
+        ~minDate:
+           option(
+             [
+               | `Date(Js.Date.t)
+               | `Moment(MomentRe.Moment.t)
+               | `String(string)
+               | `Object(Js.t({..}))
+             ]
+           )=?,
+        ~maxDate:
+           option(
+             [
+               | `Date(Js.Date.t)
+               | `Moment(MomentRe.Moment.t)
+               | `String(string)
+               | `Object(Js.t({..}))
+             ]
+           )=?,
+        ~onChange: option(MomentRe.Moment.t => unit)=?,
+        children
+      ) =>
+    ReasonReact.wrapJsForReason(
+      ~reactClass,
+      ~props=
+        Js.Nullable.(
+          {
+            "value": from_opt(option_map(unwrap_value, value)),
+            "format": from_opt(format),
+            "label": from_opt(option_map(unwrap_value, label)),
+            "minDate": from_opt(option_map(unwrap_value, minDate)),
+            "maxDate": from_opt(option_map(unwrap_value, maxDate)),
+            "onChange": from_opt(onChange)
+          }
+        ),
+      children
+    );
+};
+
 module DateTimePicker = {
   [@bs.module "material-ui-pickers"]
   external reactClass : ReasonReact.reactClass = "DateTimePicker";
