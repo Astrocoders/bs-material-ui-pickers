@@ -93,6 +93,26 @@ module DatePicker = {
              ]
            )=?,
         ~onChange: option(MomentRe.Moment.t => unit)=?,
+        ~leftArrowIcon:
+           option(
+             [ | `ReactElement(ReasonReact.reactElement) | `String(string)]
+           )=?,
+        ~rightArrowIcon:
+           option(
+             [ | `ReactElement(ReasonReact.reactElement) | `String(string)]
+           )=?,
+        ~dateRangeIcon:
+           option(
+             [ | `ReactElement(ReasonReact.reactElement) | `String(string)]
+           )=?,
+        ~timeIcon:
+           option(
+             [ | `ReactElement(ReasonReact.reactElement) | `String(string)]
+           )=?,
+        ~keyboardIcon:
+           option(
+             [ | `ReactElement(ReasonReact.reactElement) | `String(string)]
+           )=?,
         children
       ) =>
     ReasonReact.wrapJsForReason(
@@ -105,7 +125,13 @@ module DatePicker = {
             "label": from_opt(option_map(unwrap_value, label)),
             "minDate": from_opt(option_map(unwrap_value, minDate)),
             "maxDate": from_opt(option_map(unwrap_value, maxDate)),
-            "onChange": from_opt(onChange)
+            "onChange": from_opt(onChange),
+            "keyboardIcon": from_opt(option_map(unwrap_value, keyboardIcon)),
+            "timeIcon": from_opt(option_map(unwrap_value, timeIcon)),
+            "dateRangeIcon": from_opt(option_map(unwrap_value, dateRangeIcon)),
+            "rightArrowIcon":
+              from_opt(option_map(unwrap_value, rightArrowIcon)),
+            "leftArrowIcon": from_opt(option_map(unwrap_value, leftArrowIcon))
           }
         ),
       children
