@@ -111,12 +111,11 @@ module DatePicker = {
             "minDate": from_opt(option_map(unwrap_value, minDate)),
             "maxDate": from_opt(option_map(unwrap_value, maxDate)),
             "onChange": from_opt(onChange),
-            "keyboardIcon": from_opt(option_map(unwrap_value, keyboardIcon)),
-            "timeIcon": from_opt(option_map(unwrap_value, timeIcon)),
-            "dateRangeIcon": from_opt(option_map(unwrap_value, dateRangeIcon)),
-            "rightArrowIcon":
-              from_opt(option_map(unwrap_value, rightArrowIcon)),
-            "leftArrowIcon": from_opt(option_map(unwrap_value, leftArrowIcon))
+            "keyboardIcon": keyboardIcon,
+            "timeIcon": timeIcon,
+            "dateRangeIcon": dateRangeIcon,
+            "rightArrowIcon": rightArrowIcon,
+            "leftArrowIcon": leftArrowIcon
           }
         ),
       children
