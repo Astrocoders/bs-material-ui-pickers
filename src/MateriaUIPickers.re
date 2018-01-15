@@ -98,6 +98,10 @@ module DatePicker = {
         ~dateRangeIcon: ReasonReact.reactElement,
         ~timeIcon: ReasonReact.reactElement,
         ~keyboardIcon: ReasonReact.reactElement,
+        ~okLabel: option(string)=?,
+        ~cancelLabel: option(string)=?,
+        ~openToYearSelection: option(bool)=?,
+        ~clearable: option(bool)=?,
         children
       ) =>
     ReasonReact.wrapJsForReason(
@@ -115,7 +119,11 @@ module DatePicker = {
             "timeIcon": timeIcon,
             "dateRangeIcon": dateRangeIcon,
             "rightArrowIcon": rightArrowIcon,
-            "leftArrowIcon": leftArrowIcon
+            "leftArrowIcon": leftArrowIcon,
+            "okLabel": from_opt(okLabel),
+            "cancelLabel": from_opt(cancelLabel),
+            "openToYearSelection": from_opt(openToYearSelection),
+            "clearable": from_opt(clearable)
           }
         ),
       children
