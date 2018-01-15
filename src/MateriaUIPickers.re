@@ -70,10 +70,7 @@ module DatePicker = {
              ]
            )=?,
         ~format: option(string)=?,
-        ~label:
-           option(
-             [ | `ReactElement(ReasonReact.reactElement) | `String(string)]
-           )=?,
+        ~label: option(string)=?,
         ~minDate:
            option(
              [
@@ -111,7 +108,7 @@ module DatePicker = {
           {
             "value": from_opt(option_map(unwrap_value, value)),
             "format": from_opt(format),
-            "label": from_opt(option_map(unwrap_value, label)),
+            "label": from_opt(label),
             "minDate": from_opt(option_map(unwrap_value, minDate)),
             "maxDate": from_opt(option_map(unwrap_value, maxDate)),
             "onChange": from_opt(onChange),
