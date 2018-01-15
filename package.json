@@ -35,7 +35,8 @@
   "contributors": ["Remi Bernal <bernal.rs@gmail.com>"],
   "license": "MIT",
   "dependencies": {
-    "bs-moment": "^0.1.8"
+    "bs-moment": "^0.1.8",
+    "moment": "^2.20.1"
   },
   "devDependencies": {
     "bs-platform": "2.1.0",
@@ -47,8 +48,8 @@
   },
   "peerDependencies": {
     "material-ui": "^1.0.0-beta.25",
-    "reason-react": "0.3.0",
-    "material-ui-pickers": "^1.0.0-beta.12"
+    "material-ui-pickers": "^1.0.0-beta.12",
+    "reason-react": "0.3.0"
   },
   "lint-staged": {
     "*.{js,json}": ["prettier --write", "git add"],
