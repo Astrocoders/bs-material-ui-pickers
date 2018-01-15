@@ -93,26 +93,11 @@ module DatePicker = {
              ]
            )=?,
         ~onChange: option(MomentRe.Moment.t => unit)=?,
-        ~leftArrowIcon:
-           option(
-             [ | `ReactElement(ReasonReact.reactElement) | `String(string)]
-           )=?,
-        ~rightArrowIcon:
-           option(
-             [ | `ReactElement(ReasonReact.reactElement) | `String(string)]
-           )=?,
-        ~dateRangeIcon:
-           option(
-             [ | `ReactElement(ReasonReact.reactElement) | `String(string)]
-           )=?,
-        ~timeIcon:
-           option(
-             [ | `ReactElement(ReasonReact.reactElement) | `String(string)]
-           )=?,
-        ~keyboardIcon:
-           option(
-             [ | `ReactElement(ReasonReact.reactElement) | `String(string)]
-           )=?,
+        ~leftArrowIcon: ReasonReact.reactElement=ReasonReact.nullElement,
+        ~rightArrowIcon: ReasonReact.reactElement=ReasonReact.nullElement,
+        ~dateRangeIcon: ReasonReact.reactElement=ReasonReact.nullElement,
+        ~timeIcon: ReasonReact.reactElement=ReasonReact.nullElement,
+        ~keyboardIcon: ReasonReact.reactElement=ReasonReact.nullElement,
         children
       ) =>
     ReasonReact.wrapJsForReason(
