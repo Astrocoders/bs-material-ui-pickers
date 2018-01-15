@@ -97,6 +97,7 @@ module DatePicker = {
         ~keyboardIcon: ReasonReact.reactElement,
         ~okLabel: option(string)=?,
         ~cancelLabel: option(string)=?,
+        ~clearLabel: option(string)=?,
         ~openToYearSelection: option(bool)=?,
         ~clearable: option(bool)=?,
         children
@@ -120,7 +121,8 @@ module DatePicker = {
             "okLabel": from_opt(okLabel),
             "cancelLabel": from_opt(cancelLabel),
             "openToYearSelection": from_opt(openToYearSelection),
-            "clearable": from_opt(clearable)
+            "clearable": from_opt(clearable),
+            "clearLabel": from_opt(clearLabel)
           }
         ),
       children
