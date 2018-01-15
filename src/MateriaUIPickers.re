@@ -43,7 +43,7 @@ let option_map = (fn, option) =>
   };
 
 module DatePicker = {
-  [@bs.module "material-ui-pickers"];
+  [@bs.module "material-ui-pickers"]
   external reactClass : ReasonReact.reactClass = "DatePicker";
   module TimeUnit = {
     type t =
