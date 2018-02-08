@@ -98,6 +98,7 @@ module DatePicker = {
         ~okLabel: option(string)=?,
         ~cancelLabel: option(string)=?,
         ~clearLabel: option(string)=?,
+        ~textFieldStyle: Js.t({...}),
         ~openToYearSelection: option(bool)=?,
         ~clearable: option(bool)=?,
         children
@@ -122,6 +123,7 @@ module DatePicker = {
             "cancelLabel": from_opt(cancelLabel),
             "openToYearSelection": from_opt(openToYearSelection),
             "clearable": from_opt(clearable),
+            "textFieldStyle": textFieldStyle,
             "clearLabel": from_opt(clearLabel)
           }
         ),
