@@ -121,8 +121,8 @@ module DatePicker = {
             "leftArrowIcon": leftArrowIcon,
             "okLabel": from_opt(okLabel),
             "cancelLabel": from_opt(cancelLabel),
-            "openToYearSelection": from_opt(openToYearSelection),
-            "clearable": from_opt(clearable),
+            "openToYearSelection": openToYearSelection |> from_opt |> Js.Boolean.to_js_boolean,
+            "clearable": clearable |> from_opt |> Js.Boolean.to_js_boolean,
             "textFieldStyle": from_opt(textFieldStyle),
             "clearLabel": from_opt(clearLabel)
           }
