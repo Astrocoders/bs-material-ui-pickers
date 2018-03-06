@@ -27,7 +27,6 @@
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "yarn run clean && yarn run build",
     "release": "yarn run prepare && release-it",
     "format": "prettier --write ./*.{js,json} ./**/*.{js,json}"
   },
