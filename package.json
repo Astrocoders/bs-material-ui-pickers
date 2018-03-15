@@ -23,7 +23,6 @@
   "homepage": "https://github.com/bernalrs/bs-material-ui-pickers/readme",
   "scripts": {
     "precommit": "lint-staged",
-    "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
     "test": "echo \"Error: no test specified\" && exit 1",
