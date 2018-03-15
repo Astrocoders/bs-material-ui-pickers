@@ -99,8 +99,8 @@ module DatePicker = {
         ~cancelLabel: option(string)=?,
         ~clearLabel: option(string)=?,
         ~textFieldStyle: option(Js.t({..}))=?,
-        ~openToYearSelection: option(bool)=false,
-        ~clearable: option(bool)=false,
+        ~openToYearSelection=false,
+        ~clearable=false,
         children
       ) =>
     ReasonReact.wrapJsForReason(
