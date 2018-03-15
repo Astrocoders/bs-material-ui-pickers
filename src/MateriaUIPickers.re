@@ -99,8 +99,8 @@ module DatePicker = {
         ~cancelLabel: option(string)=?,
         ~clearLabel: option(string)=?,
         ~textFieldStyle: option(Js.t({..}))=?,
-        ~openToYearSelection: option(bool)=?,
-        ~clearable: option(bool)=?,
+        ~openToYearSelection: option(bool)=false,
+        ~clearable: option(bool)=false,
         children
       ) =>
     ReasonReact.wrapJsForReason(
@@ -121,8 +121,8 @@ module DatePicker = {
             "leftArrowIcon": leftArrowIcon,
             "okLabel": from_opt(okLabel),
             "cancelLabel": from_opt(cancelLabel),
-            "openToYearSelection": openToYearSelection |> from_opt |> Js.Boolean.to_js_boolean,
-            "clearable": clearable |> from_opt |> Js.Boolean.to_js_boolean,
+            "openToYearSelection": openToYearSelection |> Js.Boolean.to_js_boolean,
+            "clearable": clearable |> Js.Boolean.to_js_boolean,
             "textFieldStyle": from_opt(textFieldStyle),
             "clearLabel": from_opt(clearLabel)
           }
