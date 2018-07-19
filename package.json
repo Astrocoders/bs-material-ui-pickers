@@ -33,19 +33,19 @@
   "contributors": ["Remi Bernal <bernal.rs@gmail.com>"],
   "license": "MIT",
   "dependencies": {
-    "bs-moment": "^0.1.8",
+    "bs-moment": "^0.3.0",
     "moment": "^2.20.1"
   },
   "devDependencies": {
-    "bs-platform": "2.1.0",
+    "bs-platform": "4.0.0",
     "husky": "0.14.3",
     "lint-staged": "6.0.0",
     "prettier": "1.9.2",
-    "reason-react": "0.3.0",
+    "reason-react": "0.4.2",
     "release-it": "^5.1.2"
   },
   "peerDependencies": {
-    "material-ui": "^1.0.0-beta.25",
+    "material-ui": "1.0.0-beta.41",
     "material-ui-pickers": "^1.0.0-beta.12",
     "reason-react": "0.3.0"
   },
